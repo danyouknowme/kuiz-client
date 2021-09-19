@@ -12,8 +12,8 @@
           sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
       </div>
     </div>
-    <button class="button-quiz">
-      <a href="#">GO TO QUIZ!</a>
+    <button @click="goToQuiz()" class="button-quiz">
+      <router-link to='quiz' class="quiz-text">GO TO QUIZ!</router-link>
     </button>
     <div class="question-mark">
       <span class="ques1">?</span>
@@ -24,7 +24,7 @@
 
 <script>
 export default {
-  name: 'home'
+  name: 'home',
 }
 </script>
 
@@ -107,7 +107,7 @@ export default {
     transform: translateY(4px);
   }
 
-  .button-quiz a {
+  .quiz-text {
     font-size: 24px;
     font-weight: 600;
     text-decoration: none;

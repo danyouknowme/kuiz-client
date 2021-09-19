@@ -2,17 +2,17 @@
   <div class="navbar">
     <div class="wrapper">
       <div class="left">
-          <img src="@/assets/kuiz.png" alt="" class="logo">        
-          <div class="quiz">
-            <a href="#">QUIZ</a>
-          </div>
+        <router-link to="/"><img src="@/assets/kuiz.png" alt="" class="logo"></router-link>
+        <div class="quiz">
+          <router-link to="/quiz" class="quiz-text">QUIZ</router-link>
+        </div>
       </div>
       <div class="right">
         <div class="login">
-          <a href="#">Login</a>
+          <router-link to="/login" class="login-text">Login</router-link>
         </div>
         <div class="signup">
-          <a href="#">Sign up</a>
+          <router-link to="/register" class="signup-text">Sign up</router-link>
         </div>
       </div>
     </div>
@@ -55,7 +55,7 @@ export default {
     margin-right: 50px;
   }
 
-  .quiz a {
+  .quiz-text {
     font-size: 24px;
     text-decoration: none;
     color: rgb(88, 88, 88);
@@ -64,11 +64,11 @@ export default {
     position: relative;
   }
 
-  .quiz a:hover {
+  .quiz-text:hover {
     color: rgb(54, 54, 54);
   }
 
-  .quiz a:before {
+  .quiz-text:before {
     content: "";
     position: absolute;
     height: 0.15em;
@@ -78,7 +78,7 @@ export default {
     transition: 0.3s ease-in-out;
   }
 
-  .quiz a:hover:before {
+  .quiz-text:hover:before {
     width: 100%;
   }
 
@@ -87,7 +87,7 @@ export default {
     align-items: center;
   }
 
-  .login a, .signup a {
+  .login-text, .signup-text {
     font-size: 24px;
     text-decoration: none;
     color: rgb(88, 88, 88);
@@ -96,11 +96,11 @@ export default {
     position: relative;
   }
 
-  .login a:hover {
+  .login-text:hover {
     color: rgb(54, 54, 54);
   }
 
-  .login a:before {
+  .login-text:before {
     content: "";
     position: absolute;
     height: 0.15em;
@@ -110,7 +110,7 @@ export default {
     transition: 0.3s ease-in-out;
   }
 
-  .login a:hover:before {
+  .login-text:hover:before {
     width: 100%;
   }
 
